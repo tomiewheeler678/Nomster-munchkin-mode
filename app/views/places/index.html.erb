@@ -1,4 +1,3 @@
-
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
    <h1><%= place.name %></h1>
@@ -7,3 +6,7 @@
   </div>
 <% end %>
 
+def index
+  @places = place.all # not paginated
+  @places = place.paginate(page: params[:page]) # paginated
+end
