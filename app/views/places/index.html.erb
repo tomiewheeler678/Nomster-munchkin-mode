@@ -6,7 +6,4 @@
   </div>
 <% end %>
 
-def index
-  @places = place.all # not paginated
-  @places = place.paginate(page: params[:page]) # paginated
-end
+<% will_paginate @places %>
