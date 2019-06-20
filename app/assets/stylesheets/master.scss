@@ -34,9 +34,9 @@ body {
 }
 
 .pagination {
-  .previous_page { background:#7777ff; color:white }
+  .previous_page { background:white; color:blue }
   .previous_page.disabled { background: white; color: #777 }
-  .current { background: yellow }
-  .next_page { background: #7777ff; color: white }
+  .current { background: white }
+  .next_page { background: white; color: blue }
   .next_page.disabled { background: white; color: #777 }
 }

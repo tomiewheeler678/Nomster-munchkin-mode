@@ -24,6 +24,8 @@
     </ul>
   </div>
 </nav>
+  <div class="pagination">
+  <%= will_paginate @places, :container => false %>
     </div>
     <%= yield %>
   </body>
