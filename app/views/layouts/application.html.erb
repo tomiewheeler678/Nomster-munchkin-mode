@@ -24,14 +24,12 @@
     </ul>
   </div>
 </nav>
-  <div class="pagination">
-  <span class="previous_page disabled">&#8592; Previous</span>
-  <em class="current">1</em>
-  <a rel="next" href="/places?page=2">2</a>
-  <a href="/places?page=3">3</a>
-  <a href="/places?page=4">4</a>
-  <a class="next_page" rel="next" href="/places?page=2">Next &#8594;</a>
-</div>
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @places %>
+    </div>
+    <%= will_paginate @places, :container => false %>
+  </div>
     <%= yield %>
   </body>
 </html>
