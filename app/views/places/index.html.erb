@@ -6,21 +6,10 @@
   </div>
 <% end %>
 
-<div class=”row margin-twenty5-zero margin-b-zero pagination-row”>
-
-<div class=”col-lg-8 col-md-8 col-sm-7 col-xs-6 padding-zero”>
-
-<ul class=”pagination”>
-
-</ul>
-
-</div>
-
-<div class=”col-lg-4 col-md-4 col-sm-5 col-xs-6 pagination-info”>
-
-<span class=”pull-right”><%= page_entries_info(@places) %></span>
-
-</div>
-
-</div>
+<div class="digg_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @posts, :container => false %>
+  </div>
 
