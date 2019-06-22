@@ -25,8 +25,13 @@
   </div>
 </nav>
   <div class="pagination">
-  <%= will_paginate @places %>
-    </div>
+  <span class="previous_page disabled">&#8592; Previous</span>
+  <em class="current">1</em>
+  <a rel="next" href="/places?page=2">2</a>
+  <a href="/places?page=3">3</a>
+  <a href="/places?page=4">4</a>
+  <a class="next_page" rel="next" href="/places?page=2">Next &#8594;</a>
+</div>
     <%= yield %>
   </body>
 </html>
