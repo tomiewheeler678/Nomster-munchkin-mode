@@ -34,6 +34,9 @@
 
   <br />
 
+  <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
+  Add a photo
+</button>
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
     <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
@@ -104,10 +107,7 @@
 </div>
   
   
- <!-- Button trigger modal picture -->
-<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
-  Add a photo
-</button>
+
 
 
 <!-- Modal -->
@@ -137,7 +137,7 @@
 
 </div>
   
-<div>
+<div class="photo">
 <% @place.photos.each do |photo| %>
   <div>
     <%= image_tag photo.picture.to_s, class: 'show-image-size' %>
