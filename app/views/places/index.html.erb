@@ -37,6 +37,12 @@
       <small><%= place.user.email %></small>
     <% end %>
 
+<div class="col-12 col-sm-6">
+  <% if place.photos.present? %>
+  <%= image_tag place.photos.first.picture.url %>
+<% end %>
+</div>
+
     <% if place.comments.present? %>
     <div class="col-12">
       <blockquote>
@@ -50,6 +56,7 @@
 <% end %>
 </div>
 <% end %>
+
 
 <div class="digg_pagination">
     <div class="page_info">
